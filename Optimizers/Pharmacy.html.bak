@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <head> 
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/your-path-to-your-compiled-css-including-fontawesome/file.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="logo" href="assets/icon.jpeg">
+
+  <title>Pharmacy Health Care</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  
+
+</head>
+<body>
+<div class="container">
+	<div class="login__content">
+		<img src="pharmacymain.jpg" alt="login image" class="login__img">
+
+		<form action="" class="login__form">
+			<div>
+				<h1 class="login__title">
+					<span>Welcome</span> Back!
+				</h1>
+				<p class="login__description">
+					Welcome! Please login to continue.
+				</p>
+			</div>
+
+			<div>
+				<div class="login__inputs">
+					<div>
+						<label for="" class="login__label">Email</label>
+						<input type="email" placeholder="Enter your email address" required class="login__input">
+					</div>
+
+					<div>
+						<label for="" class="login__label">Password</label>
+
+						<div class="login__box">
+							<input type="password" placeholder="Enter your password" required class="login__input" id="input-pass">
+							<i class="ri-eye-off-line login__eye" id="input-icon"></i>
+						</div>
+					</div>
+				</div>
+
+				<div class="login__check">
+					<input type="checkbox" class="login__check-input">
+					<label for="" class="login__check-label">Remember me</label>
+				</div>
+			</div>
+
+			<div>
+				<div class="login__buttons">
+					<button class="login__button">Log In</button>
+					<button class="login__button login__button-ghost"><a href="Signup.html">Sign Up </a></button>
+				</div>
+
+				<a href="#" class="login__forgot">Forgot Password?</a>
+			</div>
+		</form>
+	</div>
+</div>
+<script>
+/*=============== SHOW HIDDEN - PASSWORD ===============*/
+function validation(){
+	var input_text = document.querySelector("#input_text");
+	var input_password = document.querySelector("#input_password");
+	var error_msg = document.querySelector(".error_msg");
+
+	if(input_text.value.length <= 3 || input_password.value.length <= 3 ){
+		error_msg.style.display = "inline-block";
+		input_text.style.border = "1px solid #f74040";
+		input_password.style.border = "1px solid #f74040";
+		return false;
+	}
+	else{
+    alert("form submitted successfully")
+		return true;
+	}
+	
+}
+
+var input_fields = document.querySelectorAll(".input");
+var login_btn = document.querySelector("#login_btn");
+
+input_fields.forEach(function(input_item){
+	input_item.addEventListener("input", function(){
+		if(input_item.value.length > 3){
+			login_btn.disabled = false;
+			login_btn.className = "btn enabled"
+		}
+	})
+}) 
+</script>
+</body>
+</html>
